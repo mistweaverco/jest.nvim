@@ -4,6 +4,8 @@ Ability to invoke jest within nvim.
 
 Based off [mattkubej/jest.nvim](https://github.com/mattkubej/jest.nvim).
 
+![demo of integrated results in the current buffer](demo-integrated.gif)
+
 ## Requirements
 
 * Neovim
@@ -39,8 +41,10 @@ require'nvim-jest'.setup {
 
 ## Usage
 
-| Command       | Description                        |
-| ---           | ---                                |
-| `:Jest`       | Run Jest on entire project         |
-| `:JestFile`   | Run Jest on file in current buffer |
-| `:JestSingle` | Run Jest on test name under cursor |
+| Command                | Description                                                                       |
+| ---                    | ---                                                                               |
+| `:Jest`                | Run Jest on entire project                                                        |
+| `:JestFile`            | Run Jest on file in current buffer                                                |
+| `:JestSingle`          | Run Jest on test name under cursor                                                |
+| `:JestIntegrated`      | Run Jest on test name under cursor, with integrated results in the current buffer |
+| `:JestIntegratedClear` | Clear integrated results in the current buffer                                    |

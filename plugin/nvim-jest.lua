@@ -9,4 +9,6 @@ vim.cmd [[
   command! Jest :call nvim_jest#test_project()
   command! JestFile :call nvim_jest#test_file()
   command! JestSingle :call nvim_jest#test_single()
+  command! JestIntegrated :call nvim_jest#test_integrated()
+  command! JestIntegratedClear :call nvim_jest#test_integrated_clear()
 ]]
