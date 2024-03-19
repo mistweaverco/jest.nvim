@@ -2,6 +2,10 @@ local M = {}
 
 local config = {}
 
+local api = vim.api
+local ts_utils = require("nvim-treesitter.ts_utils")
+local parsers = require("nvim-treesitter.parsers")
+
 local function get_current_file_path()
   return vim.fn.expand('%:p')
 end
@@ -19,7 +23,7 @@ local function focus_last_accessed_window()
 end
 
 local function get_local_jest()
-  local root_dir = vim.fn.finddir('node_modules/..', get_current_folder_path() .. ';')
+  local root_dir = vim.fn.finddir('.git/..', get_current_folder_path() .. ';')
   return root_dir .. '/node_modules/jest/bin/jest.js'
 end
 
